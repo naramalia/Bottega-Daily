@@ -21,7 +21,6 @@ function main() {
       <BrowserRouter>
         <Switch>
           <Route path='/' exact component={Home}/>
-          <Route path='/results' component={Home}/>
           <Route path='/results' component={Results}/>
         </Switch>
       </BrowserRouter>
