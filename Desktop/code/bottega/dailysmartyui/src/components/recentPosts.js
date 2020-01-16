@@ -16,7 +16,7 @@ class RecentPosts extends Component {
         const posts = this.props.recentPosts.map((posts, index) => {
             if (index < 3) {
                 return (
-                    <Post {...posts} key={index} />
+                    <Post type="recent" {...posts} key={index} />
                 )
             }
         })
