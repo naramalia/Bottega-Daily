@@ -60,7 +60,7 @@ class Post extends Component {
                         duration={ 500 }
                         height={ this.state.height }
                     >
-                    <div class="result-post__links">
+                    <div className="result-post__links">
                         {this.renderLinks()}
                     </div>
                     </AnimateHeight>
