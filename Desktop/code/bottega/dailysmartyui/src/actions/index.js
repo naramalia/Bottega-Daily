@@ -1,7 +1,6 @@
 import { SET_RECENT_POSTS, SET_RESULTS_POSTS } from './types';
 
 import axios from 'axios';
-import { callbackify } from 'util';
 
 export function fetchRecentPosts() {
     return function(dispatch) {
