@@ -17,17 +17,25 @@ class Post extends Component {
         return topics;
     }
 
+    getNameForPostLink(str) {
+        var n = str.lastIndexOf('/');
+        var res = str.substring(n+1, str.length);
+        return res;
+    }
     renderLinks() {
         let links = this.props.post_links.map((post_link, index) => {
             return (
                 <div className="post-link" key={index}>
                     <div className="post-link__box"></div>
                     <div className="post-link__link">
-                        <a href={post_link.link_url}>Useful Link {index+1}</a>
+                        <a href={post_link.link_url}>{this.getNameForPostLink(post_link.link_url)}</a>
                     </div>
                 </div>
             )
         })
+        if(links == 0) {
+            return <div className="no-content">No Post Links</div>
+        }
         return links;
     }
 
